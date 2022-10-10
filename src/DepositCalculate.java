@@ -36,23 +36,23 @@ public class DepositCalculate {
     }
     double calculateComplexPercent(double amount, double yearRate, int depositPeriod) {
         double pay = amount * Math.pow((1 + yearRate / 12), 12 * depositPeriod);
-
+                                    // Code-style рекомендует разделять пустой строкой объявление переменных и вычисления. Здесь пустая строка не нужна.  
         return roundAmount(pay, 2);
     }
 
     double calculateSimplePercent(double amount, double yearRate, int depositPeriod) {
 
-
+                                    // -//-
         return roundAmount(amount + amount * yearRate * depositPeriod, 2);
     }
 
     double roundAmount(double value, int places) {
         double scale = Math.pow(10, places);
-
+                                    // -//-
         return Math.round(value * scale) / scale;
     }
 
-
+// За исключением нескольких ненужных пустых строк код полностью соответствует code-style - приятно проверять :) 
   
 
 
